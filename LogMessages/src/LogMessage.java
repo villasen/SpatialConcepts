@@ -16,5 +16,16 @@ public class LogMessage {
         return machineId;
     }
 
+    public String getDescription(){
+        return description;
+    }
+
+    public boolean containsWord(String keyword) {
+
+        if ( keyword.equals(description)){
+            return true;
+        }
+        return false;
+    }
 
 }
