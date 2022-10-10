@@ -4,7 +4,7 @@ public class Main {
 
         // messages
         String message1 = "CLIENT3:security alert – repeated login failures";
-        String message2 = "Web:disk";//"Webserver:disk offline";
+        String message2 = "Webserver:disk offline";
         String message3 = "SERVER1:file not found";
         String message4 = "SERVER2:read error on disk DSK1";
         String message5 = "SERVER1:write error on disk DSK2 ";

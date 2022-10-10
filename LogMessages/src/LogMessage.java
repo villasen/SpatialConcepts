@@ -25,6 +25,22 @@ public class LogMessage {
         if ( keyword.equals(description)){
             return true;
         }
+        // keyword at the beginning
+        if ( keyword.indexOf(description + " ") == 0){
+            return true;
+        } // keyword preceded by space or followed by a space
+        if ( keyword.indexOf(" " + keyword + " ") != -1){
+            return true;
+        }// keyword is at the end of the description
+        // example: "error on disk"
+        if (description.length() > keyword.length()){
+            if( description.substring( description.length() - keyword.length() -1).
+                    equals(" " + keyword)) {
+                return true;
+            }
+
+
+        }
         return false;
     }
 
