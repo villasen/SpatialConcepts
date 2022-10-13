@@ -13,6 +13,10 @@ public class Main {
         LogMessage log1 = new LogMessage(message1);
         LogMessage log2 = new LogMessage(message2);
 
+        SystemLog message_logs = new SystemLog(log1);
+
+        message_logs.removeMessages("disk");
+
 
         System.out.println(log1.getMachineId());
         System.out.println(log1.getDescription());

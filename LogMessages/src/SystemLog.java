@@ -2,9 +2,21 @@ import java.util.*;
 
 public class SystemLog {
 
-        private List<LogMessage> messageList;
+   private String message1 = "CLIENT3:security alert – repeated login failures";
+   private String message2 = "Webserver:disk offline";
+   private String message3 = "SERVER1:file not found";
+   private String message4 = "SERVER2:read error on disk DSK1";
+   private String message5 = "SERVER1:write error on disk DSK2 ";
+   private String message6 = "Webserver:error on /dev/disk ";
 
 
+   private List<LogMessage> messageList;
+
+    //LogMessage log1 = new LogMessage(message1);
+    //LogMessage log2 = new LogMessage(message2);
+        public SystemLog(LogMessage log){
+            messageList.add(log);
+        }
         public List<LogMessage> removeMessages(String keyword){
 
             // create object to be returned by method
