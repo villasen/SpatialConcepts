@@ -12,21 +12,25 @@ public class Main {
 
         LogMessage log1 = new LogMessage(message1);
         LogMessage log2 = new LogMessage(message2);
+        LogMessage log3 = new LogMessage(message3);
+        LogMessage log4 = new LogMessage(message4);
+        LogMessage log5 = new LogMessage(message5);
+        LogMessage log6 = new LogMessage(message6);
 
-        SystemLog message_logs = new SystemLog(log1);
+      //  SystemLog message_logs = new SystemLog(log1);
 
-        message_logs.removeMessages("disk");
+      //  message_logs.removeMessages("disk");
 
 
-        System.out.println(log1.getMachineId());
-        System.out.println(log1.getDescription());
+       // System.out.println(log1.getMachineId());
+       // System.out.println(log1.getDescription());
 
-        System.out.println(log2.getMachineId());
-        System.out.println(log2.getDescription());
+       // System.out.println(log2.getMachineId());
+      //  System.out.println(log2.getDescription());
 
-        if(log2.containsWord("disk")){
-            System.out.println("returning true");
-        }
+     //   if(log2.containsWord("disk")){
+     //       System.out.println("returning true");
+     //   }
 
     }
 }
