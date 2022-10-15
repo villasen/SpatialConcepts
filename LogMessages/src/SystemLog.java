@@ -14,24 +14,35 @@ public class SystemLog {
 
     LogMessage log1 = new LogMessage(message1);
     LogMessage log2 = new LogMessage(message2);
-        //public SystemLog(LogMessage log){
-           // messageList.add(log);
-       // }
-      //  public List<LogMessage> removeMessages(String keyword){
+
+
+    // default constructor
+    public SystemLog(){
+        String message1 = "CLIENT3:security alert – repeated login failures";
+        String message2 = "Webserver:disk offline";
+        String message3 = "SERVER1:file not found";
+        String message4 = "SERVER2:read error on disk DSK1";
+        String message5 = "SERVER1:write error on disk DSK2 ";
+        String message6 = "Webserver:error on /dev/disk ";
+    }
+    // constructor with parameter
+    public SystemLog(LogMessage log){
+           messageList.add(log);
+        }
+
+       public List<LogMessage> removeMessages(String keyword){
 
             // create object to be returned by method
-           // List<LogMessage> removals = new ArrayList<LogMessage>();
+           List<LogMessage> removals = new ArrayList<LogMessage>();
 
-          //  for( int i=0; i < messageList.size(); i++){
+            for( int i=0; i < messageList.size(); i++){
 
-         //       if(messageList.get(i).containsWord(keyword)){
-         //           removals.add(messageList.remove(i));
-         //           i--;
-         //       }
-         //   }
-           // return  removals;
+                if(messageList.get(i).containsWord(keyword)){
+                    removals.add(messageList.remove(i));
+                    i--;
+                }
+            }
+            return  removals;
 
-      //  }
-
-
+        }
 }
