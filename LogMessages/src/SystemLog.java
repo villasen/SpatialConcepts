@@ -14,24 +14,29 @@ public class SystemLog {
 
     // default constructor
     public SystemLog(){
-/*        LogMessage log1 = new LogMessage(message1);
+        LogMessage log1 = new LogMessage(message1);
+        messageList.add(log1);
         LogMessage log2 = new LogMessage(message2);
+        messageList.add(log2);
         LogMessage log3 = new LogMessage(message3);
+        messageList.add(log3);
         LogMessage log4 = new LogMessage(message4);
+        messageList.add(log4);
         LogMessage log5 = new LogMessage(message5);
-        LogMessage log6 = new LogMessage(message6);*/
+        messageList.add(log5);
+        LogMessage log6 = new LogMessage(message6);
+        messageList.add(log6);
+
     }
     // constructor with parameter
     public SystemLog(LogMessage log){
            messageList.add(log);
         }
 
-    public void addMessages(String message) {
-        LogMessage log = new LogMessage(message);
-        for (int i = 0; i <= messageList.size(); i++) {
-            messageList.add(log);
-        }
+    public List<LogMessage> getMessageList(){
+        return messageList;
     }
+
 
     public List<LogMessage> displayMessages(){
         // create object to be returned by method
@@ -54,4 +59,6 @@ public class SystemLog {
         return  removals;
 
     }
+
+
 }
