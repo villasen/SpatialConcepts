@@ -10,19 +10,21 @@ public class Main {
         String message5 = "SERVER1:write error on disk DSK2 ";
         String message6 = "Webserver:error on /dev/disk ";
 
-        LogMessage log1 = new LogMessage(message1);
-        LogMessage log2 = new LogMessage(message2);
-        LogMessage log3 = new LogMessage(message3);
-        LogMessage log4 = new LogMessage(message4);
-        LogMessage log5 = new LogMessage(message5);
-        LogMessage log6 = new LogMessage(message6);
 
-      //  SystemLog message_logs = new SystemLog(log1);
+        SystemLog theLog = new SystemLog();
 
-      //  message_logs.removeMessages("disk");
+        theLog.addMessages(message1);
+        theLog.addMessages(message2);
+        theLog.addMessages(message3);
+        theLog.addMessages(message4);
+        theLog.addMessages(message5);
+        theLog.addMessages(message6);
 
 
-       // System.out.println(log1.getMachineId());
+        //theLog.removeMessages(("done");
+
+
+        //System.out.println(theLog..getMachineId());
        // System.out.println(log1.getDescription());
 
        // System.out.println(log2.getMachineId());
