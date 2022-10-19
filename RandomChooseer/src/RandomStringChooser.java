@@ -5,14 +5,21 @@ public class RandomStringChooser {
     private List<String> words;
     private String[] word;
 
-    public RandomStringChooser(String[] word){
+    public RandomStringChooser(String[] wordArray){
+    words = new ArrayList<String>();
 
-        this.word = word;
+    for( String singleWord : wordArray){
+
+        words.add(singleWord);
+
+     }
     }
 
-    public String[] getNext(RandomStringChooser next){
-
-        return myWord;
+    public String getNext(RandomStringChooser next){
+        if(words.size() > 0){
+          return words.remove( (int)  (Math.random() * words.size())  );
+        }
+        return "NONE";
 
     }
 
